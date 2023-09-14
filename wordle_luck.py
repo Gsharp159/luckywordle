@@ -25,7 +25,6 @@ correct_word = '' #either the correct guess or the most recent guess
 valids = []
 all_words = []
 
-#gonna do this the lazy way but people cant judge me because im admitting to being lazy
 #longest process so optimize later
 def genValids(Gs=['', '', '', '', ''], Ys=['', '', '', '', ''], Grs=[]):
 
@@ -131,7 +130,7 @@ def getColorsTotals(word, knowCorrectWord=False):
     total_yellow = 0
     deltagray = [] #list of new grays in word
 
-    #fix this idiot
+    #fix
     if not knowCorrectWord:
         for i in range(5):
             if greens[i] != '':
@@ -246,8 +245,8 @@ def scoreCom(word, word_list):
 
     print(com_list)
 
-#reowrk so u can manual inp freens and yellows n suich so not require correct as arg
-#also will b v slow because looping voer list and each word twice because wordelim call 
+#rework so u can manual inp greens and yellows and such so as not require correct as arg
+#also will b v slow because looping over list and each word twice because wordelim call 
 #returns (surprisal, expected surprisal / info gain / h)
 def infoScore(guess, correct, word_list):
     #these are giving incorrect values
